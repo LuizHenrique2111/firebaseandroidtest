@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Test App Firebase</string>
     <string name="title_form_register">Cadastre-se</string>
+    <string name="title_form_login">Login</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Senha</string>
     <string name="text_button_register">Cadastrar</string>
+    <string name="text_button_login">Entrar</string>
+    <string name="text_screen_register">Não tem uma conta? Cadastre-se agora mesmo!</string>
 </resources>
