@@ -7,4 +7,6 @@
     <string name="text_button_register">Cadastrar</string>
     <string name="text_button_login">Entrar</string>
     <string name="text_screen_register">Não tem uma conta? Cadastre-se agora mesmo!</string>
+    <string name="text_button_out">Deslogar</string>
+    <string name="do_login">Fazer o Login.</string>
 </resources>

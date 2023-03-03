@@ -1,5 +1,6 @@
 package com.luizhenrique.testappfirebase.view.formregister
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.luizhenrique.testappfirebase.R
 import com.luizhenrique.testappfirebase.databinding.ActivityFormRegisterBinding
+import com.luizhenrique.testappfirebase.view.formlogin.FormLogin
 
 class FormRegister : AppCompatActivity() {
 
@@ -54,6 +56,10 @@ class FormRegister : AppCompatActivity() {
                     snackbar.show()
                 }
             }
+        }
+            binding.txtScreenLogin.setOnClickListener {
+            val intent = Intent(this, FormLogin::class.java)
+            startActivity(intent)
         }
     }
 }

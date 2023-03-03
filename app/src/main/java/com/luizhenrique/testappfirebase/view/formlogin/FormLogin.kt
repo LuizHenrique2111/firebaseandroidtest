@@ -40,15 +40,7 @@ class FormLogin : AppCompatActivity() {
                     navigationMainScreen()
                    }
                 }.addOnFailureListener {exception ->
-
-                    val messageError = when(exception){
-                        is FirebaseAuthWeakPasswordException -> "Senha invalida."
-                        is FirebaseAuthInvalidCredentialsException -> "Email não cadastrado,"
-                        is FirebaseAuthUserCollisionException -> "Usuário já cadastrado."
-                        is FirebaseNetworkException -> "Sem conexão com a internet."
-                        else -> "Erro ao cadastrar usuário."
-                    }
-                    val snackbar = Snackbar.make(view, messageError, Snackbar.LENGTH_SHORT)
+                    val snackbar = Snackbar.make(view, "Erro ao fazer o login do usuário!", Snackbar.LENGTH_SHORT)
                     snackbar.setBackgroundTint(Color.RED)
                     snackbar.show()
                 }
@@ -64,5 +56,15 @@ class FormLogin : AppCompatActivity() {
     private fun navigationMainScreen(){
         val intent = Intent(this, MainScreen::class.java)
         startActivity(intent)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        val loadUser = FirebaseAuth.getInstance().currentUser
+
+        if(loadUser != null){
+            navigationMainScreen()
+        }
     }
 }

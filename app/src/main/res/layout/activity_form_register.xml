@@ -66,5 +66,17 @@
         android:backgroundTint="@color/black"
         />
 
+    <TextView
+        android:id="@+id/txt_screenLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/do_login"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>
